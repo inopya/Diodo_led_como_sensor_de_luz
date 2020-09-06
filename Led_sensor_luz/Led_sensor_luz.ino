@@ -46,7 +46,7 @@
 #define INTERVALO_MUESTRAS    1000      // tiempo entre muestras de luz
 #define TIEMPO_CARGA            10      // tiempo necesario para 'cargar' el led (entre 10 y 30 ms)
 #define TIEMPO_SENSADO          20      // tiempo para estabilizar la entrada antes de leer su valor
-                                       // a mayor tiempo, mayor valor medido. (entre 15 50 ms)
+                                        // a mayor tiempo, mayor valor medido. (entre 15 y 50 ms)
 
 /*mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 //        SECCION DE DEFINICION DE VARIABLES GLOBALES
@@ -66,7 +66,7 @@ uint16_t valor_sensor_azul=0;
 
 void setup(void)
 {
-  Serial.begin(115200);                           //Iniciar puerto serie apra DEBUG
+  Serial.begin(115200);                           // Iniciar puerto serie apra DEBUG
   Serial.println (F(__VERSION__));                // mostramos la version por consola, DEBUG
 }
 
