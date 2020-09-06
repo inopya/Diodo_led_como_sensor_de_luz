@@ -11,10 +11,11 @@ Uso de un diodo led como sensor de luz
     El catodo a una entrada analogica de arduino.
     Podemos usar leds de distintos colores apra medir distintas longitudes de onda de la luz
 
-    En el ejemplo se usa un led RGB de anodo comun para medir tres componentes de la luz a un mismo tiempo.
+    En el ejemplo se usa un led RGB de anodo comun para medir tres componentes de la luz
+    a un mismo tiempo.
 
 
 **Esquema conexion**
 
-![](./led_como_sensor_de_luz.png.png)
+![](./led_como_sensor_de_luz.png)
 
