@@ -64,10 +64,15 @@
 #define PIN_LED_CATODO_VERDE    A1   
 #define PIN_LED_CATODO_AZUL     A2 
  
-#define INTERVALO_MUESTRAS    1000      // tiempo entre muestras de luz
-#define TIEMPO_CARGA            10      // tiempo necesario para 'cargar' el led (entre 10 y 30 ms)
-#define TIEMPO_SENSADO          20      // tiempo para estabilizar la entrada antes de leer su valor
-                                        // a mayor tiempo, mayor valor medido. (entre 15 y 50 ms)
+#define INTERVALO_MUESTRAS    1000      // Tiempo entre muestras de luz.
+#define TIEMPO_CARGA            10      // Tiempo necesario para 'cargar' el led (entre 10 y 30 ms)
+#define TIEMPO_SENSADO          20      // Tiempo para provocar una  cierta descarga de la capacidad
+                                        // interna del led. Un menor voltaje medido representa
+                                        // un mayor valor de luminosidad, debido a que la descarga 
+                                        // es mas rapida cuanta mas luz incide en el led
+                                        // Tiempos pu elevados provocarian la descarga completa 
+                                        // de dicha capacidad interna del diodo y nos induciria a 
+                                        // pensar que la lunimosidad es elevada. (entre 15 y 50 ms)
 
 /*mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 //        SECCION DE DEFINICION DE VARIABLES GLOBALES
@@ -112,8 +117,9 @@ void loop(void)
   delay(TIEMPO_SENSADO);
 
   valor_sensor_rojo = analogRead(PIN_LED_CATODO_ROJO); 
-  //el valor medido es inversamente proporcional a la cantidad de luz que incide en el led
-  //usamos la funcion map apra mostrar en un modo 'más lógico'
+  //El valor medido es inversamente proporcional a la cantidad de luz que incide en el led
+  //ya que la capacidad interna del diodo se descarga mas rapidamente cuanta más luz recibe.
+  //Usamos la funcion map para mostrar en un modo 'más lógico' 
   valor_sensor_rojo = map(valor_sensor_rojo, 0,1023,1023,0);
 
    
@@ -126,8 +132,9 @@ void loop(void)
   delay(TIEMPO_SENSADO);
 
   valor_sensor_verde = analogRead(PIN_LED_CATODO_VERDE); 
-  //el valor medido es inversamente proporcional a la cantidad de luz que incide en el led
-  //usamos la funcion map para mostrar en un modo 'más lógico'
+  //El valor medido es inversamente proporcional a la cantidad de luz que incide en el led
+  //ya que la capacidad interna del diodo se descarga mas rapidamente cuanta más luz recibe.
+  //Usamos la funcion map para mostrar en un modo 'más lógico' 
   valor_sensor_verde = map(valor_sensor_verde, 0,1023,1023,0);
   
   /* --------- lectura sensor AZUL --------- */
@@ -139,8 +146,9 @@ void loop(void)
   delay(TIEMPO_SENSADO);
 
   valor_sensor_azul = analogRead(PIN_LED_CATODO_AZUL); 
-  //el valor medido es inversamente proporcional a la cantidad de luz que incide en el led
-  //usamos la funcion map para mostrar en un modo 'más lógico'
+  //El valor medido es inversamente proporcional a la cantidad de luz que incide en el led
+  //ya que la capacidad interna del diodo se descarga mas rapidamente cuanta más luz recibe.
+  //Usamos la funcion map para mostrar en un modo 'más lógico' 
   valor_sensor_azul = map(valor_sensor_azul, 0,1023,1023,0);
 
 
