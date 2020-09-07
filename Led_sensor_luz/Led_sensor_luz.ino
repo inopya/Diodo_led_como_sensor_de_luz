@@ -119,7 +119,7 @@ void loop(void)
   valor_sensor_rojo = analogRead(PIN_LED_CATODO_ROJO); 
   //El valor medido es inversamente proporcional a la cantidad de luz que incide en el led
   //ya que la capacidad interna del diodo se descarga mas rapidamente cuanta más luz recibe.
-  //Usamos la funcion map para mostrar en un modo 'más lógico' 
+  //Usamos la funcion map para mostrar en un modo 'más lógico', es decir: mas luz, mayor valor 
   valor_sensor_rojo = map(valor_sensor_rojo, 0,1023,1023,0);
 
    
@@ -134,7 +134,7 @@ void loop(void)
   valor_sensor_verde = analogRead(PIN_LED_CATODO_VERDE); 
   //El valor medido es inversamente proporcional a la cantidad de luz que incide en el led
   //ya que la capacidad interna del diodo se descarga mas rapidamente cuanta más luz recibe.
-  //Usamos la funcion map para mostrar en un modo 'más lógico' 
+  //Usamos la funcion map para mostrar en un modo 'más lógico', es decir: mas luz, mayor valor  
   valor_sensor_verde = map(valor_sensor_verde, 0,1023,1023,0);
   
   /* --------- lectura sensor AZUL --------- */
@@ -148,7 +148,7 @@ void loop(void)
   valor_sensor_azul = analogRead(PIN_LED_CATODO_AZUL); 
   //El valor medido es inversamente proporcional a la cantidad de luz que incide en el led
   //ya que la capacidad interna del diodo se descarga mas rapidamente cuanta más luz recibe.
-  //Usamos la funcion map para mostrar en un modo 'más lógico' 
+  //Usamos la funcion map para mostrar en un modo 'más lógico', es decir: mas luz, mayor valor  
   valor_sensor_azul = map(valor_sensor_azul, 0,1023,1023,0);
 
 
