@@ -34,7 +34,7 @@
     1) Polarizamos en inverso,
     2) esperamos unos pocos milisegundos y medimos el valor de voltaje remanente.
     
-    Si no hubiese indicido ninguna luz, tras unos pocos milisegundos la carga sería el voltaje al que fue sometido.
+    Si no hubiese incidido ninguna luz, tras unos pocos milisegundos la carga sería el voltaje al que fue sometido.
     
     En presencia de luz, cuanto menor sea el valor leido, mayor podemos asegurar que ha sido la cantidad de luz incidente
     
