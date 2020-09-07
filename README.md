@@ -1,5 +1,5 @@
 # Diodo led como sensor de luz
-Uso de un diodo led como sensor de luz
+Uso de un diodo led como sensor de luz, aprovechando su capacidad interna al polarizarse en inversa
 
 
       ===== NOTAS DE LA VERSION ===== 
