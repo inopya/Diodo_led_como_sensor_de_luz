@@ -16,7 +16,7 @@ Uso de un diodo led como sensor de luz, aprovechando su capacidad interna al pol
     1) Polarizamos en inverso,
     2) esperamos unos pocos milisegundos y medimos el valor de voltaje remanente.
     
-    Si no hubiese indicido ninguna luz, tras unos pocos milisegundos la carga sería el voltaje al que fue sometido.
+    Si no hubiese incidido ninguna luz, tras unos pocos milisegundos la carga sería el voltaje al que fue sometido.
     
     En presencia de luz, cuanto menor sea el valor leido, mayor podemos asegurar que ha sido la cantidad de luz incidente
     
@@ -25,8 +25,9 @@ Uso de un diodo led como sensor de luz, aprovechando su capacidad interna al pol
     Pero podemos usar cualquier led del que disppongamos.
 
     El ANODO del led se conectará a tierra mediante una resistencia de entre 200 y 270 ohmios
-    Dicha resitencia no es obligatoria dado que el diodo esta en inverso, pero quede ahí por si deseamos usar el led como
-    emisor de luz y como sensor a un mismo tiempo conectando el ANODO a una salida digital.
+    Dicha resitencia no es obligatoria dado que el diodo esta en inverso, 
+    pero quede ahí por si deseamos usar el led como emisor de luz 
+    y como sensor a un mismo tiempo conectando el ANODO a una salida digital.
     
     El CATODO se conecta a una entrada analogica de arduino.
     
