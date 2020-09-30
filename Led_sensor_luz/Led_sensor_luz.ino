@@ -36,7 +36,7 @@
     
     Si no hubiese incidido ninguna luz, tras unos pocos milisegundos la carga sería el voltaje al que fue sometido.
     
-    En presencia de luz, cuanto menor sea el valor leido, mayor podemos asegurar que ha sido la cantidad de luz incidente
+    En presencia de luz, cuanto menor sea el valor leido, podemos asegurar que mayor ha sido la cantidad de luz incidente
     
     Cada led 'medirá' luz en una longitud de onda próxima al tipo de luz que emite
     Los mejores resultados los obtendremos con leds rojos o verdes y cuerpo transparente.
@@ -66,11 +66,11 @@
  
 #define INTERVALO_MUESTRAS    1000      // Tiempo entre muestras de luz.
 #define TIEMPO_CARGA            10      // Tiempo necesario para 'cargar' el led (entre 10 y 30 ms)
-#define TIEMPO_SENSADO          20      // Tiempo para provocar una  cierta descarga de la capacidad
+#define TIEMPO_DESCARGA         20      // Tiempo para provocar una  cierta descarga de la capacidad
                                         // interna del led. Un menor voltaje medido representa
                                         // un mayor valor de luminosidad, debido a que la descarga 
                                         // es mas rapida cuanta mas luz incide en el led
-                                        // Tiempos pu elevados provocarian la descarga completa 
+                                        // Tiempos muy elevados provocarian la descarga completa 
                                         // de dicha capacidad interna del diodo y nos induciria a 
                                         // pensar que la lunimosidad es elevada. (entre 15 y 50 ms)
 
@@ -114,7 +114,7 @@ void loop(void)
   delay(TIEMPO_CARGA);
 
   pinMode(PIN_LED_CATODO_ROJO, INPUT); 
-  delay(TIEMPO_SENSADO);
+  delay(TIEMPO_DESCARGA);
 
   valor_sensor_rojo = analogRead(PIN_LED_CATODO_ROJO); 
   //El valor medido es inversamente proporcional a la cantidad de luz que incide en el led
@@ -129,7 +129,7 @@ void loop(void)
   delay(TIEMPO_CARGA);
 
   pinMode(PIN_LED_CATODO_VERDE, INPUT); 
-  delay(TIEMPO_SENSADO);
+  delay(TIEMPO_DESCARGA);
 
   valor_sensor_verde = analogRead(PIN_LED_CATODO_VERDE); 
   //El valor medido es inversamente proporcional a la cantidad de luz que incide en el led
@@ -143,7 +143,7 @@ void loop(void)
   delay(TIEMPO_CARGA);
 
   pinMode(PIN_LED_CATODO_AZUL, INPUT); 
-  delay(TIEMPO_SENSADO);
+  delay(TIEMPO_DESCARGA);
 
   valor_sensor_azul = analogRead(PIN_LED_CATODO_AZUL); 
   //El valor medido es inversamente proporcional a la cantidad de luz que incide en el led
